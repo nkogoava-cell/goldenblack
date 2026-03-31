@@ -2,56 +2,82 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>GoldenBlack</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoldenBlack - L'univers K-pop Ultime</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Header -->
+
+<!-- Background vidéo + particules -->
+<div class="video-bg">
+  <video autoplay muted loop id="bg-video">
+    <source src="background.mp4" type="video/mp4">
+  </video>
+  <canvas id="particles"></canvas>
+</div>
+
+<!-- Header hologramme + supernova interactive -->
 <header>
-    <h1>GoldenBlack</h1>
-    <p>Le futur de la K-pop commence ici 🌌</p>
+  <div class="overlay">
+    <h1 class="glitch" data-text="GoldenBlack">GoldenBlack</h1>
+    <p class="hologram">Le futur K-pop intergalactique commence ici 🌌</p>
+    <a href="#musique" class="btn" id="listen-btn">Écouter maintenant</a>
+  </div>
 </header>
 
-<!-- Section Musique -->
+<!-- Slider musique galactique -->
 <section id="musique">
-    <h2>Nos Mélodies IA</h2>
-    <div class="player">
-        <p>Neon Shadows</p>
-        <audio controls>
-            <source src="melodie1.mp3" type="audio/mpeg">
-        </audio>
+  <h2>Nos Mélodies IA</h2>
+  <div class="slider">
+    <div class="slide">
+      <img src="moodboard1.jpg" alt="Neon Shadows">
+      <p>Neon Shadows</p>
+      <audio controls>
+        <source src="melodie1.mp3" type="audio/mpeg">
+      </audio>
     </div>
-    <div class="player">
-        <p>Golden Venom</p>
-        <audio controls>
-            <source src="melodie2.mp3" type="audio/mpeg">
-        </audio>
+    <div class="slide">
+      <img src="moodboard2.jpg" alt="Golden Venom">
+      <p>Golden Venom</p>
+      <audio controls>
+        <source src="melodie2.mp3" type="audio/mpeg">
+      </audio>
     </div>
-    <div class="player">
-        <p>Clash</p>
-        <audio controls>
-            <source src="melodie3.mp3" type="audio/mpeg">
-        </audio>
+    <div class="slide">
+      <img src="moodboard3.jpg" alt="Clash">
+      <p>Clash</p>
+      <audio controls>
+        <source src="melodie3.mp3" type="audio/mpeg">
+      </audio>
     </div>
+  </div>
 </section>
 
-<!-- Section Moodboard / Visuels -->
+<!-- Moodboards Interstellaires -->
 <section id="visuels">
-    <h2>Univers visuel</h2>
-    <img src="moodboard1.jpg" alt="Moodboard 1">
-    <img src="moodboard2.jpg" alt="Moodboard 2">
-    <img src="moodboard3.jpg" alt="Moodboard 3">
+  <h2>Univers Visuel</h2>
+  <div class="gallery">
+    <img src="moodboard1.jpg" alt="Moodboard 1" class="parallax">
+    <img src="moodboard2.jpg" alt="Moodboard 2" class="parallax">
+    <img src="moodboard3.jpg" alt="Moodboard 3" class="parallax">
+  </div>
 </section>
 
-<!-- Fanclub -->
+<!-- Fanclub Cosmic -->
 <section id="fanclub">
-    <h2>Rejoins le Fanclub</h2>
-    <form>
-        <input type="text" placeholder="Ton prénom" required>
-        <input type="email" placeholder="Ton email" required>
-        <button type="submit">S'inscrire</button>
-    </form>
+  <h2>Rejoins le Fanclub</h2>
+  <form>
+    <input type="text" placeholder="Ton prénom" required>
+    <input type="email" placeholder="Ton email" required>
+    <button type="submit" class="btn-glow">S'inscrire</button>
+  </form>
 </section>
 
+<footer>
+  <p>© 2026 GoldenBlack - Tous droits réservés 🌌✨</p>
+</footer>
+
+<script src="script.js"></script>
+<script src="particles.js"></script>
 </body>
 </html>
